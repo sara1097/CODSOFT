@@ -1,16 +1,41 @@
-# This is a sample Python script.
+message="""1.add task 
+2.mark task as complete 
+3.view tasks
+4.Quit"""
+def add_task():
+    task=input("enter the task")
+    task_time=input("enter the date of the task")
+    note=input("enter note about task")
+    task_info={
+        "task" : task,
+        "completed" : False,
+        "dead line" : task_time,
+        "note": note
+    }
+    tasks.append(task_info)
+    print("task added successfully")
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+def mark_task_completed():
+    pass
+
+def view():
+    ...
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+tasks=[]
 
+while True:
+ print(message)
+ choice=input("enter your choice:")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+ if(choice=="1"):
+     add_task()
+ elif(choice=="2"):
+     mark_task_completed()
+ elif(choice=="3"):
+     view()
+ elif(choice=="4"):
+     break
+ else:
+     print("invalid choice , enter between 1 and 4")
